@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noticias</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/noticias.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <a href="index.html" class="logo">
+      <img src="../IMAGEM/logo.png" alt="Logo Além dos Limites">
+    </a>
+    <button class="btn-menu" id="btnMenu">Menu ☰</button>
+  </header>
+
+  <nav class="menu" id="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sobre.html">Sobre nós</a></li>
+      <li><a href="modalidades.html">Modalidades</a></li>
+      <li><a href="pratica.html">Onde praticar</a></li>
+      <li><a href="impacto.html">Impacto Social</a></li>
+      <li><a href="acessibilidade.html">Acessibilidade</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+      <li><a href="parcerias.html">Parcerias</a></li>
+      <li><a href="noticias.html" class="ativo">Notícias</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+    <script>
+    var botao = document.getElementById("btnMenu");
+    var menu = document.getElementById("menu");
+
+    botao.onclick = function () {
+      menu.classList.toggle("aberto");
+    };
+  </script>
+</body>
+</html>
