@@ -95,7 +95,7 @@ body {
   box-sizing: border-box;
   /* camada escura por cima da foto, para o texto ficar legível */
   background-image: linear-gradient(rgba(4, 25, 45, 0.55), rgba(4, 25, 45, 0.55)),
-     url("../IMAGEM/fundo.jpg");
+     url("../img/fundo.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
