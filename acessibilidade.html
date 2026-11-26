@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Acessibilidade</title>
+  <title>Acessibilidade – Além dos Limites</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/acessibilidade.css">
 </head>
@@ -13,17 +13,17 @@
     <a href="index.html" class="logo">
       <img src="img/logo.png" alt="Logo Além dos Limites">
     </a>
-    <button class="btn-menu" id="btnMenu">Menu ☰</button>
+    <button class="btn-menu" id="btnMenu" aria-expanded="false" aria-controls="menu">Menu ☰</button>
   </header>
 
-  <nav class="menu" id="menu">
+  <nav class="menu" id="menu" aria-label="Menu principal">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="sobre.html">Sobre nós</a></li>
       <li><a href="modalidades.html">Modalidades</a></li>
       <li><a href="pratica.html">Onde praticar</a></li>
       <li><a href="impacto.html">Impacto Social</a></li>
-      <li><a href="acessibilidade.html" class="ativo">Acessibilidade</a></li>
+      <li><a href="acessibilidade.html" class="ativo" aria-current="page">Acessibilidade</a></li>
       <li><a href="galeria.html">Galeria</a></li>
       <li><a href="parcerias.html">Parcerias</a></li>
       <li><a href="noticias.html">Notícias</a></li>
@@ -32,23 +32,56 @@
     </ul>
   </nav>
 
+  <main id="conteudo">
+    <!-- Por que importa -->
+    <section class="secao">
+      <h2>Por que a acessibilidade importa no esporte</h2>
+      <div class="razao verde">
+        <h3>Participar é um direito</h3>
+        <p>O esporte e o lazer fazem parte da vida de qualquer pessoa. A Lei Brasileira de Inclusão (Lei 13.146/2015) reconhece o direito da pessoa com deficiência de praticar esporte em condições de igualdade.</p>
+      </div>
+      <div class="razao azul">
+        <h3>Autonomia dentro e fora da quadra</h3>
+        <p>Uma quadra com rampa, um piso tátil ou uma bola com guizo permitem que a pessoa jogue por conta própria. No site é igual: um texto bem escrito e um botão bem rotulado permitem que ela encontre a informação sozinha.</p>
+      </div>
+      <div class="razao verde">
+        <h3>Informação também é acesso</h3>
+        <p>Para praticar uma modalidade, a pessoa precisa saber onde treinar, quando e como começar. Se essa informação está em um site difícil de usar, a barreira começa antes de chegar ao treino.</p>
+      </div>
+      <div class="razao azul">
+        <h3>Todo mundo ganha</h3>
+        <p>Rampas ajudam quem usa cadeira de rodas, mas também quem leva um carrinho de bebê. Textos claros ajudam quem usa leitor de tela, mas também quem está no celular debaixo do sol. O que é pensado para incluir acaba melhorando tudo.</p>
+      </div>
+    </section>
+
+    <section class="chamada">
+      <h2>Encontrou uma barreira?</h2>
+      <p>Sua opinião nos ajuda a melhorar. Conte o que não funcionou e nós corrigimos.</p>
+      <a href="contato.html" class="btn-chamada">Falar com a equipe</a>
+    </section>
+
+  </main>
+
   <footer class="rodape">
     <p>© 2026 Além dos Limites – Esporte inclusivo</p>
     <p>Um projeto para informar sobre o esporte adaptado</p>
     <div class="redes">
-      <a href="#"><img src="img/i.webp" alt="icone instagram"></a>
-      <a href="#"><img src="img/yt.webp" alt="icone youtube"></a>
-      <a href="#"><img src="img/zap.webp" alt="icone zap"></a>
+      <a href="#"><img src="img/i.webp" alt="Instagram"></a>
+      <a href="#"><img src="img/yt.webp" alt="YouTube"></a>
+      <a href="#"><img src="img/zap.webp" alt="WhatsApp"></a>
     </div>
   </footer>
-  
-    <script>
+
+  <script>
+    // Menu
     var botao = document.getElementById("btnMenu");
     var menu = document.getElementById("menu");
 
     botao.onclick = function () {
       menu.classList.toggle("aberto");
+      botao.setAttribute("aria-expanded", menu.classList.contains("aberto"));
     };
+    
   </script>
 </body>
 </html>

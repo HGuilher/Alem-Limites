@@ -1,13 +1,7 @@
-/* Cores do projeto:
-   verde claro: #8fdca5
-   azul bebê:   #a8d8f0
-   branco:      #ffffff
-   azul-marinho (texto): #042b73 */
-
 body {
   margin: 0;
   font-family: 'Poppins', Arial, sans-serif;
-  background-color: #1b4150;
+  background-color: #8fdca5;
 }
 
 /* ===== Cabeçalho ===== */

@@ -1,13 +1,14 @@
-/* Cores do projeto:
-   verde claro: #8fdca5
-   azul bebê:   #a8d8f0
-   branco:      #ffffff
-   azul-marinho (texto): #042b73 */
-
 body {
   margin: 0;
   font-family: 'Poppins', Arial, sans-serif;
-  background-color: #1b4150;
+  background-color: #a8d8f0; /* cor reserva caso a foto não carregue */
+  background-image: url("../img/fundoc.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ===== Cabeçalho ===== */
@@ -88,6 +89,107 @@ body {
   font-weight: 600;
 }
 
+/* ===== Conteúdo (contato) ===== */
+.conteudo {
+  flex: 1;
+  padding: 130px 20px 40px; /* 130px = espaço do cabeçalho fixo */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.caixa-contato {
+  width: 100%;
+  max-width: 550px;
+  padding: 35px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  color: #042b73;
+}
+
+.caixa-contato h1 {
+  margin: 0 0 5px;
+  font-size: 28px;
+}
+
+.intro {
+  margin: 0 0 25px;
+}
+
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 2px solid #a8d8f0;
+  border-radius: 8px;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 15px;
+  color: #042b73;
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: #8fdca5;
+}
+
+/* Campo com erro */
+.campo .invalido {
+  border-color: #d93025;
+  background-color: #fdeceb;
+}
+
+.erro {
+  display: block;
+  margin-top: 5px;
+  color: #d93025;
+  font-size: 13px;
+}
+
+.btn-enviar {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background-color: #8fdca5;
+  color: #042b73;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-enviar:hover {
+  background-color: #a8d8f0;
+}
+
+.sucesso {
+  margin: 15px 0 0;
+  color: #1b7a3a;
+  font-weight: 600;
+  text-align: center;
+}
+
 /* ===== Rodapé ===== */
 .rodape {
   padding: 20px 50px;
@@ -138,5 +240,8 @@ body {
   }
   .menu {
     right: 16px;
+  }
+  .caixa-contato {
+    padding: 22px;
   }
 }
