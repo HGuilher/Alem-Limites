@@ -88,6 +88,46 @@ body {
   font-weight: 600;
 }
 
+/* ===== Rodapé ===== */
+.rodape {
+  padding: 20px 50px;
+  background-color: #ffffff;
+  border-top: 5px solid #a8d8f0;
+  color: #042b73;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rodape p {
+  margin: 0;
+}
+
+.redes a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-left: 8px;
+  border-radius: 50%;
+  background-color: #8fdca5;
+  color: #042b73;
+  font-weight: 600;
+  text-align: center;
+  line-height: 36px;
+  text-decoration: none;
+}
+
+.redes img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.redes a:hover {
+  background-color: #a8d8f0;
+}
+
 /* ===== Celular ===== */
 @media (max-width: 600px) {
   .cabecalho {

@@ -1,13 +1,7 @@
-/* Cores do projeto:
-   verde claro: #8fdca5
-   azul bebê:   #a8d8f0
-   branco:      #ffffff
-   azul-marinho (texto): #042b73 */
-
 body {
   margin: 0;
   font-family: 'Poppins', Arial, sans-serif;
-  background-color: #1b4150;
+  background-color: #8fdca5;
 }
 
 /* ===== Cabeçalho ===== */
@@ -88,6 +82,75 @@ body {
   font-weight: 600;
 }
 
+/* ===== conteúdo da página (vídeo) ===== */
+.conteudo {
+  padding: 130px 50px 50px 50px; /* 130px no topo por causa do cabeçalho fixo */
+  min-height: 70vh;
+  box-sizing: border-box;
+}
+
+.video-box {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.video-box iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.legenda {
+  margin: 12px 0 0 0;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+/* ===== Rodapé ===== */
+.rodape {
+  padding: 20px 50px;
+  background-color: #ffffff;
+  border-top: 5px solid #a8d8f0;
+  color: #042b73;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rodape p {
+  margin: 0;
+}
+
+.redes a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-left: 8px;
+  border-radius: 50%;
+  background-color: #8fdca5;
+  color: #042b73;
+  font-weight: 600;
+  text-align: center;
+  line-height: 36px;
+  text-decoration: none;
+}
+
+.redes img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.redes a:hover {
+  background-color: #a8d8f0;
+}
+
 /* ===== Celular ===== */
 @media (max-width: 600px) {
   .cabecalho {
@@ -99,4 +162,9 @@ body {
   .menu {
     right: 16px;
   }
+  .conteudo {
+    padding: 110px 16px 30px 16px;
+  }
 }
+
+
