@@ -166,6 +166,9 @@ main p {
 .razao p {
   margin: 0;
 }
+.razao h2{
+  color: #042b73;
+}
 
 /* ===== Chamada final ===== */
 .chamada {
