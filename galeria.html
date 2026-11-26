@@ -32,6 +32,58 @@
     </ul>
   </nav>
 
+  <main class="galeria">
+    <h1>Esportes Paralímpicos</h1>
+
+    <p class="intro">
+      Os esportes aqui listados estiveram presentes nos Jogos Paralímpicos do Rio de Janeiro, em 2016,
+      e/ou estarão presentes nos Jogos Paralímpicos de Tóquio, Japão, em 2021, e também nos últimos jogos Paralímpicos, em Paris, em 2024.
+    </p>
+
+    <!-- Imagem grande (muda ao clicar numa miniatura) -->
+    <figure class="destaque">
+      <img id="imgGrande" src="img/galeria/atletismo.jpg" alt="Atletismo">
+      <figcaption id="legenda">Atletismo</figcaption>
+    </figure>
+
+    <!-- Faixa de miniaturas (rola para o lado) -->
+    <div class="miniaturas" id="miniaturas">
+      <button class="mini ativa" data-src="img/galeria/atletismo.jpg" data-nome="Atletismo">
+        <img src="img/galeria/atletismo.jpg" alt="Atletismo">
+      </button>
+      <button class="mini" data-src="img/galeria/basquete.jpg" data-nome="Basquete">
+        <img src="img/galeria/basquete.jpg" alt="Basquete">
+      </button>
+      <button class="mini" data-src="img/galeria/futsal.jpg" data-nome="Futsal">
+        <img src="img/galeria/futsal.jpg" alt="Futsal">
+      </button>
+      <button class="mini" data-src="img/galeria/goalball.jpg" data-nome="Goalball">
+        <img src="img/galeria/goalball.jpg" alt="Goalball">
+      </button>
+      <button class="mini" data-src="img/galeria/futebol7.jpg" data-nome="Futebol 7">
+        <img src="img/galeria/futebol7.jpg" alt="Futebol 7">
+      </button>
+      <button class="mini" data-src="img/galeria/halter.jpg" data-nome="Halterofilismo">
+        <img src="img/galeria/halter.jpg" alt="Halterofilismo">
+      </button>
+      <button class="mini" data-src="img/galeria/judo.jpg" data-nome="Judô">
+        <img src="img/galeria/judo.jpg" alt="Judô">
+      </button>
+      <button class="mini" data-src="img/galeria/natacao.jpg" data-nome="Natação">
+        <img src="img/galeria/natacao.jpg" alt="Natação">
+      </button>
+      <button class="mini" data-src="img/galeria/badminton.jpg" data-nome="Badminton">
+        <img src="img/galeria/badminton.jpg" alt="Badminton">
+      </button>
+      <button class="mini" data-src="img/galeria/paracanoagem.jpg" data-nome="Paracanoagem">
+        <img src="img/galeria/paracanoagem.jpg" alt="Paracanoagem">
+      </button>
+      <button class="mini" data-src="img/galeria/remo.jpg" data-nome="Remo">
+        <img src="img/galeria/remo.jpg" alt="Remo">
+      </button>
+    </div>
+  </main>
+
   <footer class="rodape">
     <p>© 2026 Além dos Limites – Esporte inclusivo</p>
     <p>Um projeto para informar sobre o esporte adaptado</p>
@@ -42,13 +94,32 @@
     </div>
   </footer>
 
-    <script>
+  <script>
+    // Menu
     var botao = document.getElementById("btnMenu");
     var menu = document.getElementById("menu");
 
     botao.onclick = function () {
       menu.classList.toggle("aberto");
     };
+
+    // Galeria
+    var imgGrande = document.getElementById("imgGrande");
+    var legenda = document.getElementById("legenda");
+    var minis = document.querySelectorAll(".mini");
+
+    for (var i = 0; i < minis.length; i++) {
+      minis[i].onclick = function () {
+        imgGrande.src = this.getAttribute("data-src");
+        imgGrande.alt = this.getAttribute("data-nome");
+        legenda.textContent = this.getAttribute("data-nome");
+
+        for (var j = 0; j < minis.length; j++) {
+          minis[j].classList.remove("ativa");
+        }
+        this.classList.add("ativa");
+      };
+    }
   </script>
 </body>
 </html>
