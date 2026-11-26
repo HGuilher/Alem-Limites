@@ -83,6 +83,62 @@ body {
 }
 
 
+/* ===== Conteúdo ===== */
+.conteudo {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 20px 40px;
+  color: #042b73;
+}
+
+.conteudo h1,
+.conteudo h2,
+.conteudo h3 {
+  margin: 24px 0 12px;
+}
+
+.caixa {
+  margin-top: 20px;
+  padding: 4px 20px 12px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.caixa h3 {
+  margin-top: 12px;
+}
+
+.conteudo p {
+  line-height: 1.6;
+}
+
+/* ===== Tabelas ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+th,
+td {
+  padding: 10px 12px;
+  border: 1px solid #a8d8f0;
+  text-align: left;
+}
+
+th {
+  background-color: #a8d8f0;
+}
+
+tr.escolhida td {
+  font-weight: 600;
+  background-color: #e6f7ec;
+}
+
+.aviso {
+  font-size: 14px;
+}
+
 /* ===== Rodapé ===== */
 .rodape {
   padding: 20px 50px;
@@ -133,5 +189,10 @@ body {
   }
   .menu {
     right: 16px;
+  }
+  th,
+  td {
+    padding: 8px;
+    font-size: 14px;
   }
 }
